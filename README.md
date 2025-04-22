@@ -8,6 +8,8 @@ git remote add gitlab git@gitlab.com:LazloDEV/docker-postgres.git
 
 git remote add bitbucket git@bitbucket.org:lazlo_dev/docker-postgres.git
 
+git pushall  
+
 
 
 # Docker
