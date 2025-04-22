@@ -2,11 +2,11 @@
 
 git init --initial-branch=main
 
-git remote add github git@github.com:LazloDEV/docker-postgres.git
+git remote add github git@github.com:LazloDEV/docker-mariadb.git
 
-git remote add gitlab git@gitlab.com:LazloDEV/docker-postgres.git
+git remote add gitlab git@gitlab.com:LazloDEV/docker-mariadb.git
 
-git remote add bitbucket git@bitbucket.org:lazlo_dev/docker-postgres.git
+git remote add bitbucket git@bitbucket.org:lazlo_dev/docker-mariadb.git
 
 git pushall  
 
