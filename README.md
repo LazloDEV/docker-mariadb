@@ -14,13 +14,21 @@ git pushall
 
 # Docker
 
+The following commands must be run in a Powershell terminal or in VS Code terminal:
+
+## Building container from customized image:
+
 docker build -t dbms-mariadb .
 
 docker run -d --rm -p 3306:3306 --name my-mariadb-1 --network my-bridge-net -e MYSQL_ROOT_PASSWORD=mypass dbms-mariadb
 
+## Minimum container based on official image:
+
 docker run -d --rm -p 3306:3306 --name my-mariadb-2 --network my-bridge-net -e MYSQL_ROOT_PASSWORD=mypass mariadb:11-ubi
 
-docker run -d --rm -p 3306:3306 --name my-mariadb-3 --network my-bridge-net -e MARIADB_ROOT_PASSWORD=mypass -v C:/DBMS/Docker-MariaDB/volumes/initdb/init.sql:/docker-entrypoint-initdb.d/init.sql -d mariadb:11-ubi
+## Container based on official image:
+
+docker run -d --rm -p 3306:3306 --name my-mariadb-3 --network my-bridge-net -e MARIADB_ROOT_PASSWORD=mypass -v "$(pwd)/volumes/initdb/init.sql:/docker-entrypoint-initdb.d/init.sql" mariadb:11-ubi
 
 
 
